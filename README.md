@@ -25,9 +25,9 @@
 
 ## System 2: AI Lead Generation Machine
 
-**The problem:** Finding and reaching potential clients manually — scraping websites, verifying contacts, warming up email accounts, writing personalised outreach was taking the team dozens of hours per week with inconsistent results.
+**The problem:** Finding and reaching potential clients manually, scraping websites, verifying contacts, warming up email accounts, writing personalised outreach was taking the team dozens of hours per week with inconsistent results.
 
-**The solution:** A fully autonomous AI pipeline that runs 24/7: scrapes leads from platforms like Clutch, enriches and qualifies them using AI, then sends warmed-up outreach emails automatically — all without human intervention.
+**The solution:** A fully autonomous AI pipeline that runs 24/7: scrapes leads from platforms like Clutch, enriches and qualifies them using AI, then sends warmed-up outreach emails automatically, all without human intervention.
 
 **Stack:** `MyClaw` · `Apollo` · `Claude API (Anthropic)` · `Airtable` · `Instantly` · `Virtual Mailbox` · `Custom Domain` · `Google Cloud Run` · `Docker`
 
@@ -48,7 +48,7 @@ Building these two systems back to back taught me things no tutorial covers:
 
 **On Autonomous Pipelines:** The hardest part isn't building the pipeline. It's making it reliable at 3AM when nobody is watching. Error handling, retry logic, and Airtable as a live audit trail were what separated a demo from a production system.
 
-**On both:** The real skill is translating a messy business problem ("we spend too much time on calls / finding clients") into a precise technical architecture. That translation — not the code — is where most of the value is created.
+**On both:** The real skill is translating a messy business problem ("we spend too much time on calls / finding clients") into a precise technical architecture. That translation, not the code, is where most of the value is created.
 
 ---
 
