@@ -1,4 +1,4 @@
-# 📞 Voice AI Virtual Assistant — Technical Overview
+#  Voice AI Virtual Assistant - Technical Overview
 
 > **Status:** Live in production · **Built:** Apr 2026 · **Company:** Geekynd Pvt Ltd
 > Code is proprietary. This document covers architecture, decisions, and learnings.
@@ -45,7 +45,7 @@ Airtable   Call Forwarding → Human Agent
 | Tool | Role | Why This Choice |
 |---|---|---|
 | **VAPI** | Voice agent orchestration | Handles real-time audio streaming, manages call flow, connects all components |
-| **Groq LLM** | Intent detection + response generation | Fastest inference available — critical for <2s latency target |
+| **Groq LLM** | Intent detection + response generation | Fastest inference available, critical for <2s latency target |
 | **DeepGram** | Speech-to-text | Low latency, high accuracy on conversational speech |
 | **Google Cloud TTS** | Text-to-speech | Natural-sounding voice output, easy API integration |
 | **Twilio** | Phone number + call routing | Industry standard, reliable call infrastructure |
@@ -62,21 +62,21 @@ Voice prompts are fundamentally different from text prompts. Key principles I ap
 
 **1. Short sentences only.** Long LLM responses sound unnatural when spoken. Prompts explicitly constrained response length.
 
-**2. Explicit escalation criteria.** The AI needed clear rules for when to forward — not a vague "if you can't help." Specific triggers: unrecognised request type, user says "speak to a human", third failed attempt at resolution.
+**2. Explicit escalation criteria.** The AI needed clear rules for when to forward, not a vague "if you can't help." Specific triggers: unrecognised request type, user says "speak to a human", third failed attempt at resolution.
 
 **3. Conversational fillers.** Added brief acknowledgement phrases ("Got it", "One moment") to mask processing time and feel more natural.
 
-**4. Structured output.** The LLM response included a JSON payload alongside the spoken text — intent classification, resolution status, and extracted data (e.g. appointment date/time) for Airtable logging.
+**4. Structured output.** The LLM response included a JSON payload alongside the spoken text to intent classification, resolution status, and extracted data (e.g. appointment date/time) for Airtable logging.
 
 ---
 
 ## What Surprised Me
 
-**Latency compounds.** STT + LLM inference + TTS = three sequential latency sources. Each one had to be optimised individually. Groq was the single biggest improvement — switching from a standard API to Groq cut LLM inference time by ~60%.
+**Latency compounds.** STT + LLM inference + TTS = three sequential latency sources. Each one had to be optimised individually. Groq was the single biggest improvement, switching from a standard API to Groq cut LLM inference time by ~60%.
 
 **Silence detection is hard.** The agent needed to know when the user had finished speaking. Too aggressive = interrupts mid-sentence. Too slow = awkward pauses. VAPI's built-in silence detection needed tuning for the specific call context.
 
-**Prompt failures are invisible.** When a text chatbot fails, you see the bad output. When a voice agent fails, the user just hangs up. Airtable logging every call with full transcript was essential for debugging — without it, failures were silent.
+**Prompt failures are invisible.** When a text chatbot fails, you see the bad output. When a voice agent fails, the user just hangs up. Airtable logging every call with full transcript was essential for debugging, without it, failures were silent.
 
 ---
 
@@ -92,7 +92,7 @@ Voice prompts are fundamentally different from text prompts. Key principles I ap
 
 ## What I'd Do Differently
 
-- Add a confidence score threshold before escalating — currently rule-based, could be smarter
+- Add a confidence score threshold before escalating, currently rule-based, could be smarter
 - Stream TTS output rather than waiting for full generation — would cut perceived latency further
 - Build a monitoring dashboard on top of Airtable data rather than raw table views
 
