@@ -1,14 +1,14 @@
-# 🚀 Production AI Systems — Built at Geekynd Pvt Ltd
+# 🚀 Production AI Systems - Built at Geekynd Pvt Ltd
 
 > These systems are live in production. Code is confidential (proprietary to Geekynd Pvt Ltd) but architecture, decisions, and learnings are documented here.
 >
-> Built and deployed by **Rajrishi Kashyap** — AI Implementation Associate @ Geekynd Pvt Ltd (Apr 2026 – Present)
+> Built and deployed by **Rajrishi Kashyap** - AI Implementation Associate @ Geekynd Pvt Ltd (Apr 2026 – Present)
 
 ---
 
 ## System 1: Voice AI Virtual Assistant
 
-**The problem:** Clients were calling in for appointment bookings and general queries. A human had to be available 24/7 to pick up, respond, and log outcomes — slow, expensive, error-prone.
+**The problem:** Clients were calling in for appointment bookings and general queries. A human had to be available 24/7 to pick up, respond, and log outcomes - slow, expensive, error-prone.
 
 **The solution:** An AI voice agent that picks up every call, handles the conversation autonomously, logs outcomes to a database, and only forwards to a human when the AI cannot resolve the request.
 
@@ -25,7 +25,7 @@
 
 ## System 2: AI Lead Generation Machine
 
-**The problem:** Finding and reaching potential clients manually — scraping websites, verifying contacts, warming up email accounts, writing personalised outreach — was taking the team dozens of hours per week with inconsistent results.
+**The problem:** Finding and reaching potential clients manually — scraping websites, verifying contacts, warming up email accounts, writing personalised outreach was taking the team dozens of hours per week with inconsistent results.
 
 **The solution:** A fully autonomous AI pipeline that runs 24/7: scrapes leads from platforms like Clutch, enriches and qualifies them using AI, then sends warmed-up outreach emails automatically — all without human intervention.
 
@@ -44,7 +44,7 @@
 
 Building these two systems back to back taught me things no tutorial covers:
 
-**On Voice AI:** Latency is everything. Users tolerate a 1.5s pause in human conversation — they don't tolerate 3s from an AI. Every architectural decision (Groq for fast LLM inference, DeepGram for low-latency STT) was driven by that constraint. Prompt engineering for voice is also fundamentally different from text — you're writing for ears, not eyes.
+**On Voice AI:** Latency is everything. Users tolerate a 1.5s pause in human conversation, they don't tolerate 3s from an AI. Every architectural decision (Groq for fast LLM inference, DeepGram for low-latency STT) was driven by that constraint. Prompt engineering for voice is also fundamentally different from text that you're writing for ears, not eyes.
 
 **On Autonomous Pipelines:** The hardest part isn't building the pipeline. It's making it reliable at 3AM when nobody is watching. Error handling, retry logic, and Airtable as a live audit trail were what separated a demo from a production system.
 
