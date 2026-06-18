@@ -1,4 +1,4 @@
-# 🚀 Production AI Systems - Built at Geekynd Pvt Ltd
+#  Production AI Systems - Built at Geekynd Pvt Ltd
 
 > These systems are live in production. Code is confidential (proprietary to Geekynd Pvt Ltd) but architecture, decisions, and learnings are documented here.
 >
@@ -14,10 +14,10 @@
 
 **Stack:** `VAPI` · `Groq LLM` · `DeepGram` · `Google Cloud TTS` · `Twilio` · `Airtable` · `Node.js` · `Google Cloud Run` · `Docker`
 
-📞 **30+ calls/day handled autonomously**
-⚡ **<2s end-to-end response latency**
-🔄 **Smart call forwarding to human agents when needed**
-📋 **Every call outcome logged to Airtable automatically**
+ **30+ calls/day handled autonomously**
+ **<2s end-to-end response latency**
+ **Smart call forwarding to human agents when needed**
+ **Every call outcome logged to Airtable automatically**
 
 [Read the full technical breakdown →](./voice-ai-agent/OVERVIEW.md)
 
@@ -31,10 +31,10 @@
 
 **Stack:** `MyClaw` · `Apollo` · `Claude API (Anthropic)` · `Airtable` · `Instantly` · `Virtual Mailbox` · `Custom Domain` · `Google Cloud Run` · `Docker`
 
-🎯 **150+ qualified leads/week generated autonomously**
-📧 **Warmed-up email infrastructure for high deliverability**
-🤖 **Runs 24/7 with zero manual prospecting**
-📉 **~70% reduction in manual sales operations**
+ **150+ qualified leads/week generated autonomously**
+ **Warmed-up email infrastructure for high deliverability**
+ **Runs 24/7 with zero manual prospecting**
+ **~70% reduction in manual sales operations**
 
 [Read the full technical breakdown →](./lead-gen-machine/OVERVIEW.md)
 
@@ -52,4 +52,4 @@ Building these two systems back to back taught me things no tutorial covers:
 
 ---
 
-> 📫 **Rajrishi Kashyap** · raj01rishi@gmail.com · [LinkedIn](https://linkedin.com/in/rajrishi) · [GitHub](https://github.com/rajrishikashyap)
+>  **Rajrishi Kashyap** · raj01rishi@gmail.com · [LinkedIn](https://linkedin.com/in/rajrishi) · [GitHub](https://github.com/rajrishikashyap)
