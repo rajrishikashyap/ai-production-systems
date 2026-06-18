@@ -52,4 +52,4 @@ Building these two systems back to back taught me things no tutorial covers:
 
 ---
 
->  **Rajrishi Kashyap** · raj01rishi@gmail.com · [LinkedIn](https://linkedin.com/in/rajrishi) · [GitHub](https://github.com/rajrishikashyap)
+>  **Rajrishi Kashyap** · raj01rishi@gmail.com · [LinkedIn]([https://linkedin.com/in/rajrishi](https://www.linkedin.com/in/rajrishikashyap/)) · [GitHub](https://github.com/rajrishikashyap)
